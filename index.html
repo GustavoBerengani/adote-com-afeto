@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galeria de adoção de animais com pets disponíveis, filtros e fluxo de contato responsável.">
+  <title>Adote com Afeto | Galeria de Adoção</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ir para o início">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>
+        <strong>Adote com Afeto</strong>
+        <small>Galeria de adoção responsável</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#galeria">Galeria</a>
+      <a href="#processo">Processo</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Projeto acadêmico pronto para apresentação</p>
+        <h1 id="hero-title">Encontre um novo lar para cada história.</h1>
+        <p class="hero-text">
+          Uma galeria simples, rápida e acessível para aproximar pessoas de animais disponíveis para adoção.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#galeria">Ver animais</a>
+          <a class="button secondary" href="#processo">Como funciona</a>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="Resumo da galeria">
+        <img
+          src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=900&q=80"
+          alt="Cachorro feliz em área externa"
+        >
+        <div class="hero-stats" aria-label="Indicadores da galeria">
+          <span><strong id="totalPets">0</strong> animais</span>
+          <span><strong>Busca</strong> local</span>
+          <span><strong>100%</strong> estático</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section gallery-section" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <p class="eyebrow">Animais disponíveis</p>
+        <h2 id="gallery-title">Galeria de adoção</h2>
+        <p>Filtre por perfil, veja detalhes e registre interesse em poucos cliques.</p>
+      </div>
+
+      <div class="toolbar" aria-label="Filtros da galeria">
+        <label class="search-label" for="searchInput">Buscar animal</label>
+        <input id="searchInput" type="search" placeholder="Nome, espécie ou cidade">
+
+        <div class="filter-group" role="group" aria-label="Filtrar por tipo">
+          <button class="filter active" type="button" data-filter="todos">Todos</button>
+          <button class="filter" type="button" data-filter="cao">Cães</button>
+          <button class="filter" type="button" data-filter="gato">Gatos</button>
+          <button class="filter" type="button" data-filter="especial">Cuidados especiais</button>
+        </div>
+      </div>
+
+      <div id="petGrid" class="pet-grid" aria-live="polite"></div>
+      <p id="emptyState" class="empty-state" hidden>Nenhum animal encontrado com esse filtro.</p>
+    </section>
+
+    <section id="processo" class="section process-section" aria-labelledby="process-title">
+      <div class="section-heading">
+        <p class="eyebrow">Adoção responsável</p>
+        <h2 id="process-title">Processo sugerido</h2>
+      </div>
+
+      <ol class="process-list">
+        <li>
+          <strong>Conheça o perfil</strong>
+          <span>Veja idade, temperamento, cidade e necessidades do animal.</span>
+        </li>
+        <li>
+          <strong>Registre interesse</strong>
+          <span>Envie uma mensagem inicial para a equipe responsável pela adoção.</span>
+        </li>
+        <li>
+          <strong>Faça a entrevista</strong>
+          <span>Confirme rotina, ambiente e condições para receber o novo companheiro.</span>
+        </li>
+        <li>
+          <strong>Acompanhe a adaptação</strong>
+          <span>Mantenha contato após a adoção para acompanhar bem-estar e adaptação.</span>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contato" class="section contact-section" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2 id="contact-title">Tenho interesse em adotar</h2>
+        <p>
+          Esta versão demonstra o fluxo visual. Em produção, o envio pode ser conectado a e-mail,
+          formulário de contato ou serviço em cloud.
+        </p>
+      </div>
+
+      <form class="contact-form">
+        <label for="petInterest">Animal de interesse</label>
+        <input id="petInterest" name="petInterest" type="text" placeholder="Escolha um animal na galeria">
+
+        <label for="guardianName">Seu nome</label>
+        <input id="guardianName" name="guardianName" type="text" placeholder="Nome do interessado">
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="4" placeholder="Conte um pouco sobre sua rotina e espaço disponível"></textarea>
+
+        <button class="button primary" type="submit">Preparar mensagem</button>
+        <p id="formFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Adote com Afeto - site estático em HTML, CSS e JavaScript.</p>
+    <a href="#top">Voltar ao topo</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
